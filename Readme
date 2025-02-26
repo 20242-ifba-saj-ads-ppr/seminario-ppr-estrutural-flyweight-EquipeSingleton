@@ -1,0 +1,11 @@
+// Participantes:
+
+// INTERFACE -> Projectile - ela tem as propriedades extrísicas - comum para todos;
+
+// CLASSES CONCRETAS -> Bullet e Missile - cada uma delas implementa Projectile(tem as propriedades extrísecas) mas dentro de cada classes há propriedades intrísecas (únicas);
+
+// FÁBRICA FLYWEIGHT -> ProjectileFactory - ela gerencia instâncias compartilhadas, caso um tipo ainda não tenha sido criado, essa fábrica cria e armazena em um hashmap, se já existir a ábrica reutiliza;
+
+// CLIENTE -> FlyweightGame - solicita projéteis da fábrica;
+
+

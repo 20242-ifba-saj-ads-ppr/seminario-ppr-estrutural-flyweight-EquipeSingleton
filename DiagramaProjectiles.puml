@@ -1,0 +1,31 @@
+@startuml
+interface Projectile {
+    + display(x: int, y: int, color: String)
+}
+
+class Bullet {
+    - type: String
+    + Bullet()
+    + display(x: int, y: int, color: String)
+}
+
+class Missile {
+    - type: String
+    + Missile()
+    + display(x: int, y: int, color: String)
+}
+
+class ProjectileFactory {
+    - projectiles: Map<String, Projectile>
+    + getProjectile(type: String): Projectile
+}
+
+class FlyweightGame {
+    + main(args: String[])
+}
+
+Projectile <|.. Bullet
+Projectile <|.. Missile
+ProjectileFactory ..> Projectile
+FlyweightGame ..> ProjectileFactory
+@enduml
